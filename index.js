@@ -1,45 +1,104 @@
-function newImage(url, left, bottom){
-    let object = document.createElement('img')
-    object.src = url
-    object.style.position = 'fixed'
-    object.style.left = left + 'px'
-    object.style.bottom = bottom + 'px'
-    document.body.append(object)
-    return object
+function newImage(){
+    let newImage = document.createElement('img')
+    newImage.src = 'assets/green-character.gif'
+    newImage.style.position = 'fixed'
+    newImage.style.left = '100px'
+    newImage.style.bottom = '100px'
+    document.body.append(newImage)  
 }
+newImage()
 
-function newItem(url, left, bottom){
-    let item = newImage(url, left, bottom)
+function newTree(){
+    let newTree = document.createElement('img')
+    newTree.src = 'assets/tree.png'
+    newTree.style.position = 'fixed'
+    newTree.style.left = '200px'
+    newTree.style.bottom = '300px'
+    document.body.append(newTree)  
 }
+newTree()
 
-function newInventory(){
-    let inventory = document.createElement('div')
-    inventory.style.position = 'fixed'
-    inventory.style.bottom = '0px'
-    inventory.style.left = '0px'
-    inventory.style.width = '100%'
-    inventory.style.height = '100px'
-    inventory.style.display = 'flex'
-    inventory.style.flexDirection = 'row'
-    inventory.style.alignItems = 'center'
-    inventory.style.justifyContent = 'space-evenly'
-    inventory.style.border = '2px solid black'
-    inventory.style.backgroundColor = 'brown'
-    document.body.append(inventory)
+function pineTree(){
+    let pineTree = document.createElement('img')
+    pineTree.src = 'assets/pine-tree.png '
+    pineTree.style.position = 'fixed'
+    pineTree.style.left = '450px'
+    pineTree.style.bottom = '200px'
+    document.body.append(pineTree)  
 }
+pineTree()
 
-newInventory() 
-newImage('assets/green-character.gif', 100, 250)
-newImage('assets/tree.png', 150, 450)
-newImage('assets/pillar.png', 300, 250)
-newImage('assets/pine-tree.png', 400, 350)
-newImage('assets/crate.png', 125, 350)
-newImage('assets/well.png', 500, 575)
+function Pillar(){
+    let Pillar = document.createElement('img')
+    Pillar.src = ' assets/pillar.png'
+    Pillar.style.position = 'fixed'
+    Pillar.style.left = '350px'
+    Pillar.style.bottom = '100px'
+    document.body.append(Pillar)  
+}
+Pillar()
 
-newItem('assets/sword.png', 450, 550)
-newItem('assets/shield.png', 165, 335)
-newItem('assets/staff.png', 600, 250)
+function Crate(){
+    let Crate = document.createElement('img')
+    Crate.src = 'assets/crate.png'
+    Crate.style.position = 'fixed'
+    Crate.style.left = '150px'
+    Crate.style.bottom = '200px'
+    document.body.append(Crate)  
+}
+Crate()
 
+function Well(){
+    let Well = document.createElement('img')
+    Well.src = 'assets/well.png '
+    Well.style.position = 'fixed'
+    Well.style.left = '500px'
+    Well.style.bottom = '425px'
+    document.body.append(Well)  
+}
+Well()
+
+function newItem() {
+    let newItem = document.createElement('img')
+    newItem.src = 'assets/sword.png'
+    newItem.style.position = 'fixed'
+    newItem.style.left = '500px'
+    newItem.style.bottom = '405px'
+    document.body.append(newItem)
+  
+    newItem.addEventListener('dblclick', function() {
+      newItem.remove()
+    })
+  }
+  newItem()
+
+  function shield() {
+    let shield = document.createElement('img')
+    shield.src = 'assets/shield.png '
+    shield.style.position = 'fixed'
+    shield.style.left = '165px'
+    shield.style.bottom = '185px'
+    document.body.append(shield)
+  
+    shield.addEventListener('dblclick', function() {
+      shield.remove()
+    })
+  }
+  shield()
+  
+  function staff() {
+    let staff = document.createElement('img')
+    staff.src = 'assets/staff.png'
+    staff.style.position = 'fixed'
+    staff.style.left = '600px'
+    staff.style.bottom = '100px'
+    document.body.append(staff)
+  
+    staff.addEventListener('dblclick', function() {
+      staff.remove()
+    })
+  }
+  staff()
 
 
 
